@@ -1,5 +1,6 @@
 # Understanding the Four Rules of Simple Design
-Presentation about [Understanding the Four Rules of Simple Design][book].
+[Presentation][presentation] about 
+[Understanding the Four Rules of Simple Design][book].
 
 ## Development
 You can alter the presentation in the `docs/presentation.md` markdown file. Once
@@ -15,5 +16,6 @@ python -m SimpleHTTPServer
 
 And goto [`http://localhost:8000/docs/`][preview]
 
+[presentation]: http://fifth-postulate.nl/4_rules_simple_design/
 [book]: https://leanpub.com/4rulesofsimpledesign
 [preview]: localhost://localhost:8000/docs/
