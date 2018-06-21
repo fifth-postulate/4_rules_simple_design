@@ -4,6 +4,10 @@
 
 background-image: url(image/lightning.jpg)
 
+???
+
+Developer on call story
+
 ---
 
 ## Recognition
