@@ -28,13 +28,32 @@ background-image: url(image/dejavu.jpg)
 
 ## Who recognizes this
 
+* Code nobody wants to touch in fear of breaking it.
+* Development speed all but stopped.
+* Adding features becomes every more complex.
+* You have two bugs, you fix one, now there are five.
+
 ---
 
-## Why
+background-image: url(image/why.png)
+
+???
+
+## Why does this happen?
+
+* You are all smart.
+* You all want to avoid this situation.
+* You have the best intentions.
 
 ---
 
-## The road to hell is paved with good intentions 
+background-image: url(image/yellow_brick_road.jpg)
+
+???
+
+* The road to hell is paved with good intentions.
+* And I am not the wizard of Oz that knows it all.
+* I am here to tell you to look behind the curtain.
 
 ---
 
