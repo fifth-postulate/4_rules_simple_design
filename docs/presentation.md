@@ -6,6 +6,8 @@ background-image: url(image/lightning.jpg)
 
 ???
 
+## Tale
+
 * Lightning crackled through the sky, illuminating your grim face.
 * You stayed up late, but that is fine. You couldn't sleep anyway.
 * Nervously you eye your phone, checking for the humpth time if it is one.
@@ -20,7 +22,11 @@ background-image: url(image/lightning.jpg)
 
 ---
 
-## Recognition
+background-image: url(image/dejavu.jpg)
+
+???
+
+## Who recognizes this
 
 ---
 
