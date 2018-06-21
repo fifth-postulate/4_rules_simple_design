@@ -2,7 +2,7 @@
 
 ---
 
-## The Tale
+background-image: url(image/lightning.jpg)
 
 ---
 
