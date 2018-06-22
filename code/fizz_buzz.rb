@@ -45,36 +45,50 @@ end
 
 class FizzBuzzerTest < Test::Unit::TestCase
 
+	def fizzbuzz_of(n)
+		CaseBuilder.new(n)
+	end
+
+	class CaseBuilder
+		def initialize(n)
+			@n = n
+		end
+
+		def should_equal(message)
+			Case.new(@n, message)
+		end
+	end
+
+	class Case
+		def initialize(n, message)
+			@n = n
+			@message = message
+		end
+
+		def n
+			@n
+		end
+
+		def message
+			@message
+		end
+	end
+
 	def setup
 		@fizzbuzz = FizzBuzz.new()
 	end
 
-	def test_fizzbuzz_of_1_is_1
-		assert_equal("1", @fizzbuzz.of(1))
+	def test_fizzbuzz_of_n_should_equal_message
+		[
+			fizzbuzz_of(1).should_equal("1"),
+			fizzbuzz_of(2).should_equal("2"),
+			fizzbuzz_of(3).should_equal("Fizz"),
+			fizzbuzz_of(5).should_equal("Buzz"),
+			fizzbuzz_of(6).should_equal("Fizz"),
+			fizzbuzz_of(10).should_equal("Buzz"),
+			fizzbuzz_of(15).should_equal("FizzBuzz")
+		].each {|test_case| 
+			assert_equal(test_case.message, @fizzbuzz.of(test_case.n))
+		}
 	end
-
-	def test_fizzbuzz_of_2_is_2
-		assert_equal("2", @fizzbuzz.of(2))
-	end
-
-	def test_fizzbuzz_of_3_is_Fizz
-		assert_equal("Fizz", @fizzbuzz.of(3))
-	end
-
-	def test_fizzbuzz_of_5_is_Buzz
-		assert_equal("Buzz", @fizzbuzz.of(5))
-	end
-
-	def test_fizzbuzz_of_6_is_Fizz
-		assert_equal("Fizz", @fizzbuzz.of(6))
-	end
-
-	def test_fizzbuzz_of_10_is_Buzz
-		assert_equal("Buzz", @fizzbuzz.of(10))
-	end
-	
-	def test_fizzbuzz_of_15_is_FizzBuzz
-		assert_equal("FizzBuzz", @fizzbuzz.of(15))
-	end
-
 end
