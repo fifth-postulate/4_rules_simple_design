@@ -65,6 +65,25 @@ background-image: url(image/yellow_brick_road.jpg)
 
 ---
 
+## How?
+
+---
+
+## Kata
+
+---
+
+## Improve
+
+---
+
+## Four Rules of Simple Design
+
+1. Tests Pass
+2. Expresses Intent
+3. No duplication
+4. Small
+
 * **presentation**: [http://fifth-postulate.nl/4_rules_simple_design/](http://fifth-postulate.nl/4_rules_simple_design/)
 * **twitter**: [@daan_van_berkel](https://twitter.com/daan_van_berkel)
 * **GitHub**: [dvberkel](https://github.com/dvberkel)
