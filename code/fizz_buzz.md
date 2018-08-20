@@ -162,5 +162,65 @@ duplicate both the knowledge of what to test and the knowledge how to test is.
 We do make a mental note that our test cause does not express intent very
 clearly.
 
+### `fizzbuzz.of(5)`
+The next interesting case is 5. Adding a test for is is nothing more than adding
+an other test case.
+
+```ruby
+[5, "Buzz"]
+```
+
+Again, this fails as expected. We have some experience with this kind of
+failure. Let's add to our implementation, by copying our guard.
+
+```ruby
+if n == 5 then
+	return "Buzz"
+end
+```
+
+The tests pass, but we copied some code. Let's make a mental note of that. We
+also have a note about the expression of intent in our test code. We will
+address that first.
+
+We have spoken about test case, so let's conjure them up.
+
+```ruby
+class Case
+	def initialize(n, message)
+		@n = n
+		@message = message
+	end
+
+	def n
+		@n
+	end
+
+	def message
+		@message
+	end
+end
+```
+
+This allows us to name the arguments for the `test_case` instead of getting them
+by index. Out test now looks like
+
+```ruby
+def test_fizzbuzz
+	[
+		Case.new(1, "1"),
+		Case.new(2, "2"),
+		Case.new(3, "Fizz"),
+		Case.new(5, "Buzz")
+	].each {|test_case|
+		assert_equal(test_case.message, @fizzbuzz.of(test_case.n))
+	}
+end
+```
+
+This is an improvement. There are still improvements to be made, but let us not
+forget why we are here.
+
+
 [fizzbuzz]: https://codingdojo.org/kata/FizzBuzz/
 [design]: https://leanpub.com/4rulesofsimpledesign
