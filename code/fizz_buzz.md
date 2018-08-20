@@ -78,6 +78,7 @@ def of(n)
   "1"
 end
 ```
+
 ### `fizzbuzz.of(2)`
 The next step is the `fizzbuzz` of 2. We quickly make a copy of a test, stopping
 only to make a mental note that we _copied_ something.
@@ -114,6 +115,52 @@ end
 
 There is some other duplication, but we will wait until we have an better
 opportunity to address it.
+
+### `fizzbuzz.of(3)`
+The next stop is the `fizzbuzz` of 3. Another quick copy of the test, checks
+that case.
+
+```ruby
+def test_fizzbuzz_of_3_should_equal_Fizz
+	assert_equal("Fizz", @fizzbuzz.of(3))
+end
+```
+
+This fails as expected. The quickest way to a passing set of tests is to add a
+guard to our implementation.
+
+```ruby
+def of(n)
+	if n == 3 then
+		return "Fizz"
+	end
+	n.to_s
+end
+```
+
+With the tests passing, let's step back to our mental note. We copied a test
+twice. This duplicates the knowledge of how to test `fizzbuzz` and is in
+violation with **rule 3**. We are going to address that now.
+
+```ruby
+def test_fizzbuzz
+	[
+		[1, "1"],
+		[2, "2"],
+		[3, "Fizz"]
+	].each {|test_case|
+		assert_equal(test_case[1], @fizzbuzz.of(test_case[0]))
+	}
+end
+```
+
+This makes code separates how to test and what to test. By introducing it we
+prevent the duplication of how to test `fizzbuzz`. After a quick check that our
+new test, works correctly we can safely delete the original tests. These only
+duplicate both the knowledge of what to test and the knowledge how to test is.
+
+We do make a mental note that our test cause does not express intent very
+clearly.
 
 [fizzbuzz]: https://codingdojo.org/kata/FizzBuzz/
 [design]: https://leanpub.com/4rulesofsimpledesign
