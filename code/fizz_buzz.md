@@ -16,6 +16,7 @@ Create a function that accepts a number `n` and returns
 4. Otherwise, a string representations of `n`.
 
 ## Kata
+### `fizzbuzz.of(1)`
 We start out with a blank file. The first rule, **Tests pass**, Tells us that
 tests are important. We better start out with them
 
@@ -77,6 +78,42 @@ def of(n)
   "1"
 end
 ```
+### `fizzbuzz.of(2)`
+The next step is the `fizzbuzz` of 2. We quickly make a copy of a test, stopping
+only to make a mental note that we _copied_ something.
+
+```ruby
+def test_fizzbuzz_of_2_should_equal_2
+	fizzbuzz = FizzBuzz.new
+	
+    assert_equal("2", fizzbuzz.of(2))
+end
+```
+
+This fails, because our return value is hard coded. Let's change the
+implementation.
+
+```ruby
+def of(n)
+  n.to_s
+end
+```
+
+Although the test pass, there is a lot of duplication, which we should address
+according to **rule 3**, no duplication.
+
+The first thing that is duplicated is the knowledge of how a `FizzBuzz` is
+created in the tests. This can be remedied by creating a `setup` method and
+defining a `fizzbuzz` field, and use it.
+
+```ruby
+def setup
+	@fizzbuzz = FizzBuzz.new
+end
+```
+
+There is some other duplication, but we will wait until we have an better
+opportunity to address it.
 
 [fizzbuzz]: https://codingdojo.org/kata/FizzBuzz/
 [design]: https://leanpub.com/4rulesofsimpledesign
