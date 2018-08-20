@@ -307,5 +307,140 @@ The will still pass all the tests. So we can remove the older implementation.
 The result is a bit of an eye sore. It clearly violates **rule 4** small. Let's
 do the final case first.
 
+### `fizzbuzz.of(10)`
+The next and final step should be easy. We add a test case.
+
+```ruby
+Case.new(15, "FizzBuzz")
+```
+
+Notice the failing test. And implement it by adding a fizzbuzz case.
+
+```ruby
+Case.new(15, "FizzBuzz")
+```
+
+And all is well. We did notice that the implementation of our method isn't
+small, violating **rule 4**.
+
+The problem is that we need to distinguish between two cases, when we do find a
+case that applies and when we don't find a case. If there would be a default
+case, that would eliminate that check.
+
+```ruby
+class DefaultCase
+	def applies_to(n)
+		true
+	end
+
+	def response(n)
+		n.to_s
+	end
+end
+```
+
+For our plan to work we need an argument to the response method of our general
+case. Now that we have a `DefaultCase` we can add it to the cases as catch all.
+
+```ruby
+DefaultCase.new
+```
+
+Now that we know that we always have a case, we can remove the check.
+
+```ruby
+.response n
+```
+
+### Cleanup
+Let's check our rules one more time.
+
+#### rule 1; Tests pass
+All the tests pass. This provides a strong sense of security when refactoring
+
+#### rule 2; Express intent
+##### What does the test case test?
+When we look at our test method, there is some intent missing. What is a case
+testing? Let's clean this up. We will introduce a test case builder.
+
+```ruby
+class CaseBuilder
+	def initialize(n)
+		@n = n
+	end
+
+	def should_equal(response)
+		Case.new(@n, response)
+	end
+end
+```
+
+This class is designed to provide a fluent interface. Together with a factory
+method
+
+```ruby
+def fizzbuzz_of(n)
+	CaseBuilder.new(n)
+end
+```
+
+we can express our test cases as
+
+```ruby
+fizzbuzz_of(1).should_equal("1"),
+fizzbuzz_of(2).should_equal("2"),
+fizzbuzz_of(3).should_equal("Fizz"),
+fizzbuzz_of(5).should_equal("Buzz"),
+fizzbuzz_of(6).should_equal("Fizz"),
+fizzbuzz_of(10).should_equal("Buzz"),
+fizzbuzz_of(15).should_equal("FizzBuzz")
+```
+
+##### How do we assert?
+Our assertion is a bit convoluted, by introducing an assert method we express
+our intent. Our test case asserts it self.
+
+```ruby
+def assert(framework, fizzbuzz)
+	framework.assert_equal(self.message, fizzbuzz.of(self.n))
+end
+```
+
+The body of our test loop can now be
+
+```ruby
+test_case.assert(self, @fizzbuzz)
+```
+
+#### Rule 3; Duplication
+We have introduced two cases, the `FizzBuzz` case and the `FizzBuzzTest` case.
+They are very similar. But the serve different purposes. So although the look
+similar, they are not the same. Let's leave them apart for now.
+
+#### Rule 4; Small
+The `of` method is kind of big. Let's tuck the cases in a field an be done with
+it
+
+```ruby
+def initialize 
+	@cases = [
+		Case.new(15, "FizzBuzz"),
+		Case.new(5, "Buzz"),
+		Case.new(3, "Fizz"),
+		DefaultCase.new
+	] 
+end
+```
+
+our `of` method becomes
+
+```ruby
+def of(n)
+	@cases
+		.find {|a_case| a_case.applies_to(n) }
+		.response n
+end
+```
+
 [fizzbuzz]: https://codingdojo.org/kata/FizzBuzz/
 [design]: https://leanpub.com/4rulesofsimpledesign
