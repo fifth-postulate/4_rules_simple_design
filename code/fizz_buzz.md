@@ -243,11 +243,69 @@ def of(n)
 end
 ```
 
-
-
 There is some apparent duplication, but we will make of note of that and work on
 it until the case of 10.
 
+### `fizzbuzz.of(10)`
+We learned a lot in case 6, so now we tackle case 10. We want to focus on the
+duplication. First add a new test case.
+
+```ruby
+Case.new(10, "Buzz")
+```
+
+This fails, but a similar solution can be made as for the case of 6.
+
+```ruby
+def of(n)
+	if n % 5 == 0 then
+		return "Buzz"
+	end
+	if n % 3 == 0 then
+		return "Fizz"
+	end
+	n.to_s
+end
+```
+
+The duplication we notice is the knowledge how we handle our guard. Let us
+address that problem.
+
+```ruby
+class Case
+	def initialize(divisor, message)
+		@divisor = divisor
+		@message = message
+	end
+
+	def applies_to(n)
+		n % @divisor == 0
+	end
+
+	def response
+		@message
+	end
+end
+```
+
+We introduce a `fizzbuzz` case. It is responsible to check if this case applies
+to `n` and, if so, return a response. We can use it in the following way.
+
+```ruby
+		a_case = [
+			Case.new(5, "Buzz"),
+			Case.new(3, "Fizz")
+		].find {|a_case| a_case.applies_to(n) }
+		if a_case then
+			return a_case.response
+		else
+			return n.to_s
+		end
+```
+
+The will still pass all the tests. So we can remove the older implementation.
+The result is a bit of an eye sore. It clearly violates **rule 4** small. Let's
+do the final case first.
 
 [fizzbuzz]: https://codingdojo.org/kata/FizzBuzz/
 [design]: https://leanpub.com/4rulesofsimpledesign
