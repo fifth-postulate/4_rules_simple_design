@@ -221,6 +221,33 @@ end
 This is an improvement. There are still improvements to be made, but let us not
 forget why we are here.
 
+### `fizzbuzz.of(6)`
+In our implementation we test for a literal 3. The next interesting test case is
+that of 6.
+
+```ruby
+Case.new(6, "Fizz")
+```
+
+As to be expected this fails. Changing the guard for 3 solves that problem.
+
+```ruby
+def of(n)
+	if n == 5 then
+		return "Buzz"
+	end
+	if n % 3 == 0 then
+		return "Fizz"
+	end
+	n.to_s
+end
+```
+
+
+
+There is some apparent duplication, but we will make of note of that and work on
+it until the case of 10.
+
 
 [fizzbuzz]: https://codingdojo.org/kata/FizzBuzz/
 [design]: https://leanpub.com/4rulesofsimpledesign
