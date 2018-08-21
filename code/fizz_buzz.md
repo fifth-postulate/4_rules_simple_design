@@ -313,7 +313,7 @@ The next and final step should be easy. We add a test case.
 Case.new(15, "FizzBuzz")
 ```
 
-Notice the failing test. And implement it by adding a fizzbuzz case.
+Notice the failing test. Implement it by adding a fizzbuzz case.
 
 ```ruby
 Case.new(15, "FizzBuzz")
