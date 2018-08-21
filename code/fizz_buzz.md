@@ -1,4 +1,4 @@
-# FizzBuzz
+Convert code whitespace to tabu# FizzBuzz
 This is an annotated walk through of the [`FizzBuzz` kata][fizzbuzz]. The goal
 is to demonstrate the [_4 rules of simple design_][design].
 
@@ -100,7 +100,7 @@ end
 ```
 
 Although the test pass, there is a lot of duplication, which we should address
-according to **rule 3**, no duplication.
+according to rule 3, **no duplication**.
 
 The first thing that is duplicated is the knowledge of how a `FizzBuzz` is
 created in the tests. This can be remedied by creating a `setup` method and
@@ -303,7 +303,7 @@ to `n` and, if so, return a response. We can use it in the following way.
 ```
 
 The will still pass all the tests. So we can remove the older implementation.
-The result is a bit of an eye sore. It clearly violates **rule 4** small. Let's
+The result is a bit of an eye sore. It clearly violates rule 4 **small**. Let's
 do the final case first.
 
 ### `fizzbuzz.of(10)`
