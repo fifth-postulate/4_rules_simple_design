@@ -81,7 +81,7 @@ end
 
 ### `fizzbuzz.of(2)`
 The next step is the `fizzbuzz` of 2. We quickly make a copy of a test, stopping
-only to make a mental note that we _copied_ something.
+only to make a note that we _copied_ something.
 
 ```ruby
 def test_fizzbuzz_of_2_should_equal_2
@@ -138,7 +138,7 @@ def of(n)
 end
 ```
 
-With the tests passing, let's step back to our mental note. We copied a test
+With the tests passing, let's step back to our note. We copied a test
 twice. This duplicates the knowledge of how to test `fizzbuzz` and is in
 violation with **rule 3**. We are going to address that now.
 
@@ -159,7 +159,7 @@ prevent the duplication of how to test `fizzbuzz`. After a quick check that our
 new test, works correctly we can safely delete the original tests. These only
 duplicate both the knowledge of what to test and the knowledge how to test is.
 
-We do make a mental note that our test cause does not express intent very
+We do make a note that our test cause does not express intent very
 clearly.
 
 ### `fizzbuzz.of(5)`
@@ -179,7 +179,7 @@ if n == 5 then
 end
 ```
 
-The tests pass, but we copied some code. Let's make a mental note of that. We
+The tests pass, but we copied some code. Let's make a note of that. We
 also have a note about the expression of intent in our test code. We will
 address that first.
 
