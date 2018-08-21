@@ -153,7 +153,7 @@ def test_fizzbuzz
 end
 ```
 
-This makes code separates how to test and what to test. By introducing it we
+This code separates how to test and what to test. By introducing it we
 prevent the duplication of how to test `fizzbuzz`. After a quick check that our
 new test, works correctly we can safely delete the original tests. These only
 duplicate both the knowledge of what to test and the knowledge how to test is.
