@@ -155,7 +155,7 @@ end
 
 This code separates how to test and what to test. By introducing it we
 prevent the duplication of how to test `fizzbuzz`. After a quick check that our
-new test, works correctly we can safely delete the original tests. These only
+new test works correctly, we can safely delete the original tests. These only
 duplicate both the knowledge of what to test and the knowledge how to test is.
 
 We do make a note that our test cause does not express intent very
@@ -306,7 +306,7 @@ The will still pass all the tests. So we can remove the older implementation.
 The result is a bit of an eye sore. It clearly violates rule 4 **small**. Let's
 do the final case first.
 
-### `fizzbuzz.of(10)`
+### `fizzbuzz.of(15)`
 The next and final step should be easy. We add a test case.
 
 ```ruby
