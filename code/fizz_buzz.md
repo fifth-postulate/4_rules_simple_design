@@ -86,8 +86,7 @@ only to make a note that we _copied_ something.
 ```ruby
 def test_fizzbuzz_of_2_should_equal_2
 	fizzbuzz = FizzBuzz.new
-	
-    assert_equal("2", fizzbuzz.of(2))
+	assert_equal("2", fizzbuzz.of(2))
 end
 ```
 
@@ -96,7 +95,7 @@ implementation.
 
 ```ruby
 def of(n)
-  n.to_s
+	n.to_s
 end
 ```
 
@@ -428,7 +427,7 @@ def initialize
 		Case.new(5, "Buzz"),
 		Case.new(3, "Fizz"),
 		DefaultCase.new
-	] 
+	]
 end
 ```
 
