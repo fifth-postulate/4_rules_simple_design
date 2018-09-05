@@ -87,16 +87,18 @@ background-image: url(image/how.jpg)
 
 ---
 
-## Improve
-
----
-
 ## Four Rules of Simple Design
 
 1. Tests Pass
 2. Expresses Intent
 3. No duplication
 4. Small
+
+??? 
+
+* How to apply?
+* How to improve?
+* How to practice?
 
 ---
 
