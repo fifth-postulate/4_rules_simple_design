@@ -61,6 +61,8 @@ background-image: url(image/epke-zonderland.jpg)
 
 ???
 
+## Who is this?
+
 * Epke Zonderland (Rio 2016)
 * Excellence from practice 
 * Practice is not work
@@ -70,6 +72,8 @@ background-image: url(image/epke-zonderland.jpg)
 background-image: url(image/how.jpg)
 
 ???
+
+## But how?
 
 * How to practice?
 * What to practice?
@@ -83,6 +87,13 @@ background-image: url(image/how.jpg)
 > pairs. The term form is used for the corresponding concept in non-Japanese
 > martial arts in general.
 
+???
+
+## Kata help
+
+* Repetition help
+* No pressure for working software
+
 ---
 
 ## Four Rules of Simple Design
@@ -94,9 +105,7 @@ background-image: url(image/how.jpg)
 
 ???
 
-* How to apply?
-* How to improve?
-* How to practice?
+## How to apply?
 
 ---
 
@@ -110,13 +119,22 @@ background-image: url(image/how.jpg)
 
 # Reflection
 
+* This is an exposition
+* Don't take it as truth
+* Adopt it to your own
+
 ---
 
 background-image: url(image/mountain_path.svg)
 
 ???
 
-# Global Day of Code Retreat
+## Global Day of Code Retreat
+
+* If you are interested?
+* Global day of code retreat
+* **November 17, 2018**
+* Maybe Honeypot wants to organize
 
 ---
 
@@ -125,6 +143,9 @@ background-image: url(image/mountain_path.svg)
 ???
 
 ## Audience participation
+
+* I need two volunteers
+* At least one should be familiar with Ruby
 
 ---
 
