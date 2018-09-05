@@ -5,27 +5,31 @@ RSpec.describe Convert do
     @convert = Convert.new
   end
 
-  it "returns a dot-matrix representation for a \"A\"" do
-    expect(@convert.letter 'A').to eq [
-                                    '.....',
-                                    '..*..',
-                                    '.*.*.',
-                                    '*...*',
-                                    '*****',
-                                    '*...*',
-                                    '*...*',
-                                  ]
-  end
+  it "returns a dot-matrix representation for capital letters" do
+    [
+      ['A', [
+         '.....',
+         '..*..',
+         '.*.*.',
+         '*...*',
+         '*****',
+         '*...*',
+         '*...*',
+       ]
+      ],
+      ['B', [
+         '.....',
+         '****.',
+         '*...*',
+         '****.',
+         '*...*',
+         '*...*',
+         '****.',
+       ]
+      ],
 
-  it "returns a dot-matrix representation for a \"B\"" do
-    expect(@convert.letter 'B').to eq [
-                                    '.....',
-                                    '****.',
-                                    '*...*',
-                                    '****.',
-                                    '*...*',
-                                    '*...*',
-                                    '****.',
-                                  ]
+    ].each do |test_case|
+      expect(@convert.letter test_case[0]).to eq test_case[1]
+    end
   end
 end
