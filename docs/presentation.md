@@ -110,6 +110,10 @@ background-image: url(image/why.jpg)
 
 ---
 
+## Global Day of Code Retreat
+
+---
+
 ## Audience participation
 
 ---
