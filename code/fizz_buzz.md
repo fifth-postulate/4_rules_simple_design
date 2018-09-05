@@ -1,4 +1,4 @@
-Convert code whitespace to tabu# FizzBuzz
+# FizzBuzz
 This is an annotated walk through of the [`FizzBuzz` kata][fizzbuzz]. The goal
 is to demonstrate the [_4 rules of simple design_][design].
 
