@@ -272,9 +272,9 @@ address that problem.
 
 ```ruby
 class Case
-	def initialize(divisor, message)
+	def initialize(divisor, response)
 		@divisor = divisor
-		@message = message
+		@message = response
 	end
 
 	def applies_to(n)
@@ -282,7 +282,7 @@ class Case
 	end
 
 	def response
-		@message
+		@response
 	end
 end
 ```
