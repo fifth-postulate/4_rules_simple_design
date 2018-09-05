@@ -67,7 +67,7 @@ background-image: url(image/epke-zonderland.jpg)
 
 ---
 
-background-image: url(image/how.jpg)
+background-image: url(image/why.jpg)
 
 ???
 
@@ -99,6 +99,10 @@ background-image: url(image/how.jpg)
 * How to apply?
 * How to improve?
 * How to practice?
+
+---
+
+## Demo
 
 ---
 
