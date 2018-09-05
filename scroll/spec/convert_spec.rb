@@ -14,4 +14,18 @@ RSpec.describe Convert do
                                     '*...*',
                                   ]
   end
+
+  it "returns a dot-matrix representation for a \"B\"" do
+    convert = Convert.new
+
+    expect(convert.letter 'B').to eq [
+                                    '.....',
+                                    '****.',
+                                    '*...*',
+                                    '****.',
+                                    '*...*',
+                                    '*...*',
+                                    '****.',
+                                  ]
+  end
 end
