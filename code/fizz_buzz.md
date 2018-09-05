@@ -441,5 +441,11 @@ def of(n)
 end
 ```
 
+## Reflection
+In this above transcript we walked through the [fizzbuzz kata][fizzbuzz] keeping
+the [4 rules of simple design][design] in mind. It can not be stressed enough
+that this shouldn't be viewed as a definite answer. Take it as an exposition
+that should be adapted to your problem and your style.
+
 [fizzbuzz]: https://codingdojo.org/kata/FizzBuzz/
 [design]: https://leanpub.com/4rulesofsimpledesign
