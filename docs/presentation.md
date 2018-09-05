@@ -1,4 +1,4 @@
-# Understanding the 4 Four Rules of Simple Design
+# Understanding the Four Rules of Simple Design
 
 ---
 
@@ -67,7 +67,7 @@ background-image: url(image/epke-zonderland.jpg)
 
 ---
 
-background-image: url(image/why.jpg)
+background-image: url(image/how.jpg)
 
 ???
 
@@ -76,8 +76,6 @@ background-image: url(image/why.jpg)
 * When to practice?
 
 ---
-
-## Kata
 
 [Kata](https://en.wikipedia.org/wiki/Kata) (型 or 形 literally: "form") are
 
@@ -112,11 +110,13 @@ background-image: url(image/why.jpg)
 
 # Reflection
 
-
-
 ---
 
-## Global Day of Code Retreat
+background-image: url(image/mountain_path.svg)
+
+???
+
+# Global Day of Code Retreat
 
 ---
 
