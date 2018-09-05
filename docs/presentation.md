@@ -94,7 +94,7 @@ background-image: url(image/how.jpg)
 3. No duplication
 4. Small
 
-??? 
+???
 
 * How to apply?
 * How to improve?
