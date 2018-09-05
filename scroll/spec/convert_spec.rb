@@ -4,6 +4,14 @@ RSpec.describe Convert do
   it "returns a dot-matrix representation for a \"A\"" do
     convert = Convert.new
 
-    expect(convert.letter 'a').to eq []
+    expect(convert.letter 'A').to eq [
+                                    '.....',
+                                    '..*..',
+                                    '.*.*.',
+                                    '*...*',
+                                    '*****',
+                                    '*...*',
+                                    '*...*',
+                                  ]
   end
 end
