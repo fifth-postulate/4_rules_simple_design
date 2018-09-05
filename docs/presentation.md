@@ -120,6 +120,10 @@ background-image: url(image/mountain_path.svg)
 
 ---
 
+<img src="image/We_Can_Do_It!.jpg" height="640px">
+
+???
+
 ## Audience participation
 
 ---
