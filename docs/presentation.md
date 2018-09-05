@@ -71,6 +71,12 @@ background-image: url(image/yellow_brick_road.jpg)
 
 ## Kata
 
+[Kata](https://en.wikipedia.org/wiki/Kata) (型 or 形 literally: "form") are
+
+> detailed choreographed patterns of movements practiced either solo or in
+> pairs. The term form is used for the corresponding concept in non-Japanese
+> martial arts in general.
+
 ---
 
 ## Improve
