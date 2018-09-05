@@ -63,10 +63,17 @@ background-image: url(image/epke-zonderland.jpg)
 
 * Epke Zonderland (Rio 2016)
 * Excellence from practice 
+* Practice is not work
 
 ---
 
-## How?
+background-image: url(image/how.jpg)
+
+??? 
+
+* How to practice?
+* What to practice?
+* When to practice?
 
 ---
 
