@@ -1,4 +1,4 @@
-# greetings
+# scroll
 A small project using the [Novation Launchpad][launchpad] as a scrolling
 [dot-matrix display][dot-matrix]. 
 
