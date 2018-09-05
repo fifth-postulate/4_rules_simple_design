@@ -57,11 +57,12 @@ background-image: url(image/yellow_brick_road.jpg)
 
 ---
 
-## Excellence
+background-image: url(image/epke-zonderland.jpg)
 
----
+???
 
-## Practice
+* Epke Zonderland (Rio 2016)
+* Excellence from practice 
 
 ---
 
