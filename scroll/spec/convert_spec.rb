@@ -1,10 +1,12 @@
 require "convert"
 
 RSpec.describe Convert do
-  it "returns a dot-matrix representation for a \"A\"" do
-    convert = Convert.new
+  before(:each) do
+    @convert = Convert.new
+  end
 
-    expect(convert.letter 'A').to eq [
+  it "returns a dot-matrix representation for a \"A\"" do
+    expect(@convert.letter 'A').to eq [
                                     '.....',
                                     '..*..',
                                     '.*.*.',
@@ -16,9 +18,7 @@ RSpec.describe Convert do
   end
 
   it "returns a dot-matrix representation for a \"B\"" do
-    convert = Convert.new
-
-    expect(convert.letter 'B').to eq [
+    expect(@convert.letter 'B').to eq [
                                     '.....',
                                     '****.',
                                     '*...*',
