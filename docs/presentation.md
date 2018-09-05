@@ -69,7 +69,7 @@ background-image: url(image/epke-zonderland.jpg)
 
 background-image: url(image/how.jpg)
 
-??? 
+???
 
 * How to practice?
 * What to practice?
