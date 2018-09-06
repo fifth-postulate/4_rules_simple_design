@@ -26,7 +26,9 @@ RSpec.describe Convert do
          '****.',
        ]),
     ].each do |test_case|
-      expect(@convert.letter test_case.a_letter).to eq test_case.expected_representation
+      representation = @convert.letter test_case.a_letter
+
+      expect(representation).to eq test_case.expected_representation
     end
   end
 end
