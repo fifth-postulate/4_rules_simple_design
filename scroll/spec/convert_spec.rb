@@ -7,7 +7,7 @@ RSpec.describe Convert do
 
   it "returns a dot-matrix representation for capital letters" do
     [
-      ['A', [
+      letter('A').should_convert_to([
          '.....',
          '..*..',
          '.*.*.',
@@ -15,9 +15,8 @@ RSpec.describe Convert do
          '*****',
          '*...*',
          '*...*',
-       ]
-      ],
-      ['B', [
+      ]),
+      letter('B').should_convert_to([
          '.....',
          '****.',
          '*...*',
@@ -25,11 +24,38 @@ RSpec.describe Convert do
          '*...*',
          '*...*',
          '****.',
-       ]
-      ],
-
+       ]),
     ].each do |test_case|
-      expect(@convert.letter test_case[0]).to eq test_case[1]
+      expect(@convert.letter test_case.a_letter).to eq test_case.expected_representation
     end
+  end
+end
+
+def letter(a_letter)
+  CaseBuilder.new(a_letter)
+end
+
+class CaseBuilder
+  def initialize(letter)
+    @letter = letter
+  end
+
+  def should_convert_to(representation)
+    Case.new(@letter, representation)
+  end
+end
+
+class Case
+  def initialize(letter, representation)
+    @letter = letter
+    @representation = representation
+  end
+
+  def a_letter
+    @letter
+  end
+
+  def expected_representation
+    @representation
   end
 end
