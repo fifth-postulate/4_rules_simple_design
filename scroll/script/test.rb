@@ -9,21 +9,26 @@ def to_hash(letter)
   end
 end
 
+def to_light_pattern(base_pattern)
+  base_pattern.prepend(".....")
+  base_pattern
+    .map { |word| word + "..." }
+    .map { |word| word.split('') }
+    .flatten()
+    .map { |letter| to_hash(letter) }
+end
+
 base_pattern = [
-  "*..*..*.",
-  ".*..*..*",
-  "..*..*..",
-  "*..*..*.",
-  ".*..*..*",
-  "..*..*..",
-  "*..*..*.",
-  ".*..*..*",
+  '.....',
+  '****.',
+  '*...*',
+  '****.',
+  '*...*',
+  '*...*',
+  '****.',
 ]
 
-pattern = base_pattern
-            .map { |word| word.split('') }
-            .flatten()
-            .map { |letter| to_hash(letter) }
+pattern = to_light_pattern(base_pattern)
 
 device = Launchpad::Device.new({:device_name => "Launchpad Mini MIDI 1"})
 device.test_leds
