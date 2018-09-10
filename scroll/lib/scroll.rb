@@ -6,7 +6,8 @@ class Scroll
   def initialize(message)
     build = PatternBuilder.new()
     pattern = build.from(message)
-    @pattern = slice(8).of(pattern)
+    @width = 8
+    @pattern = slice(@width).of(pattern)
     @index = 0
   end
 
@@ -16,6 +17,10 @@ class Scroll
 
   def advance
     @index += 1
+  end
+
+  def show?
+    @pattern.full_slice_from?(@index)
   end
 
   def show_on(receiver)
