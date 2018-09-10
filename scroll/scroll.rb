@@ -9,7 +9,7 @@ scroll = Scroll.new("hello world")
 while true
   while scroll.show? do
     scroll.show_on(pad)
-    sleep 0.25
+    sleep 0.1
     scroll.advance
   end
   scroll.reset
