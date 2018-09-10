@@ -7,6 +7,15 @@ RSpec.describe Convert do
 
   it "returns a dot-matrix representation for capital letters" do
     [
+      letter(' ').should_convert_to([
+         '.....',
+         '.....',
+         '.....',
+         '.....',
+         '.....',
+         '.....',
+         '.....',
+      ]),
       letter('A').should_convert_to([
          '.....',
          '..*..',
