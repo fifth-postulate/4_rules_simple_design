@@ -15,8 +15,10 @@ RSpec.describe Convert do
          '.....',
          '.....',
          '.....',
+         '.....',
       ]),
       letter('A').should_convert_to([
+         '.....',
          '.....',
          '..*..',
          '.*.*.',
@@ -27,6 +29,7 @@ RSpec.describe Convert do
       ]),
       letter('B').should_convert_to([
          '.....',
+         '.....',
          '****.',
          '*...*',
          '****.',
@@ -35,6 +38,7 @@ RSpec.describe Convert do
          '****.',
        ]),
       letter('C').should_convert_to([
+         '.....',
          '.....',
          '.***.',
          '*...*',
@@ -45,6 +49,7 @@ RSpec.describe Convert do
        ]),
       letter('D').should_convert_to([
          '.....',
+         '.....',
          '****.',
          '*...*',
          '*...*',
@@ -53,6 +58,7 @@ RSpec.describe Convert do
          '****.',
        ]),
       letter('E').should_convert_to([
+         '.....',
          '.....',
          '*****',
          '*....',
@@ -63,6 +69,7 @@ RSpec.describe Convert do
        ]),
       letter('F').should_convert_to([
          '.....',
+         '.....',
          '*****',
          '*....',
          '****.',
@@ -71,6 +78,7 @@ RSpec.describe Convert do
          '*....',
        ]),
       letter('G').should_convert_to([
+         '.....',
          '.....',
          '*****',
          '*....',
@@ -81,6 +89,7 @@ RSpec.describe Convert do
        ]),
       letter('H').should_convert_to([
          '.....',
+         '.....',
          '*...*',
          '*...*',
          '*****',
@@ -89,6 +98,7 @@ RSpec.describe Convert do
          '*...*',
        ]),
       letter('I').should_convert_to([
+         '.....',
          '.....',
          '.***.',
          '..*..',
@@ -99,6 +109,7 @@ RSpec.describe Convert do
        ]),
       letter('J').should_convert_to([
          '.....',
+         '.....',
          '.****',
          '...*.',
          '...*.',
@@ -107,6 +118,7 @@ RSpec.describe Convert do
          '.**..',
        ]),
       letter('K').should_convert_to([
+         '.....',
          '.....',
          '*...*',
          '*..*.',
@@ -117,6 +129,7 @@ RSpec.describe Convert do
        ]),
       letter('L').should_convert_to([
          '.....',
+         '.....',
          '*....',
          '*....',
          '*....',
@@ -125,6 +138,7 @@ RSpec.describe Convert do
          '*****',
        ]),
       letter('M').should_convert_to([
+         '.....',
          '.....',
          '*...*',
          '**.**',
@@ -135,6 +149,7 @@ RSpec.describe Convert do
        ]),
       letter('N').should_convert_to([
          '.....',
+         '.....',
          '*...*',
          '**..*',
          '*.*.*',
@@ -143,6 +158,7 @@ RSpec.describe Convert do
          '*...*',
        ]),
       letter('O').should_convert_to([
+         '.....',
          '.....',
          '.***.',
          '*...*',
@@ -153,6 +169,7 @@ RSpec.describe Convert do
        ]),
       letter('P').should_convert_to([
          '.....',
+         '.....',
          '****.',
          '*...*',
          '****.',
@@ -161,6 +178,7 @@ RSpec.describe Convert do
          '*....',
        ]),
       letter('Q').should_convert_to([
+         '.....',
          '.....',
          '.***.',
          '*...*',
@@ -171,6 +189,7 @@ RSpec.describe Convert do
        ]),
       letter('R').should_convert_to([
          '.....',
+         '.....',
          '****.',
          '*...*',
          '****.',
@@ -179,6 +198,7 @@ RSpec.describe Convert do
          '*...*',
        ]),
       letter('S').should_convert_to([
+         '.....',
          '.....',
          '.***.',
          '*...*',
@@ -189,6 +209,7 @@ RSpec.describe Convert do
        ]),
       letter('T').should_convert_to([
          '.....',
+         '.....',
          '*****',
          '..*..',
          '..*..',
@@ -198,14 +219,16 @@ RSpec.describe Convert do
        ]),
       letter('U').should_convert_to([
          '.....',
+         '.....',
          '*...*',
          '*...*',
          '*...*',
          '*...*',
          '*...*',
-         '.****',
+         '.***.',
        ]),
       letter('V').should_convert_to([
+         '.....',
          '.....',
          '*...*',
          '*...*',
@@ -216,6 +239,7 @@ RSpec.describe Convert do
         ]),
       letter('W').should_convert_to([
          '.....',
+         '.....',
          '*...*',
          '*...*',
          '*...*',
@@ -224,6 +248,7 @@ RSpec.describe Convert do
          '.*.*.',
        ]),
       letter('X').should_convert_to([
+         '.....',
          '.....',
          '*...*',
          '.*.*.',
@@ -234,6 +259,7 @@ RSpec.describe Convert do
        ]),
       letter('Y').should_convert_to([
          '.....',
+         '.....',
          '*...*',
          '*...*',
          '.*.*.',
@@ -242,6 +268,7 @@ RSpec.describe Convert do
          '..*..',
        ]),
       letter('Z').should_convert_to([
+         '.....',
          '.....',
          '****.',
          '...*.',
