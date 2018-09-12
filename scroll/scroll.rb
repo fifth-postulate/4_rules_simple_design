@@ -2,9 +2,11 @@ require 'launchpad/device'
 require "scroll"
 require "pad"
 
+message = "  " + ARGV[0] + "  "
+
 device = Launchpad::Device.new({:device_name => "Launchpad Mini MIDI 1"})
 pad = Pad.new(device)
-scroll = Scroll.new("hello world")
+scroll = Scroll.new(message)
 
 while true
   while scroll.show? do
