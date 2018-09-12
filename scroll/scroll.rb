@@ -8,11 +8,15 @@ device = Launchpad::Device.new({:device_name => "Launchpad Mini MIDI 1"})
 pad = Pad.new(device)
 scroll = Scroll.new(message)
 
-while true
-  while scroll.show? do
-    scroll.show_on(pad)
-    sleep 0.1
-    scroll.advance
+begin
+  while true
+    while scroll.show? do
+      scroll.show_on(pad)
+      sleep 0.1
+      scroll.advance
+    end
+    scroll.reset
   end
-  scroll.reset
+rescue Interrupt
+  device.reset
 end
