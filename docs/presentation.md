@@ -8,13 +8,13 @@ background-image: url(image/lightning.jpg)
 
 ## Tale
 
-* Lightning crackled through the sky, illuminating your grim face.
+* Lightning crackles through the sky, illuminating your grim face.
 * You stayed up late, but that is fine. You couldn't sleep anyway.
-* Nervously you eye your phone, checking for the humpth time if it is one.
+* Nervously you eye your phone, checking for the humpth time if it is on.
 * Your rest your weary head.
 * "I am just going to close my eyes for a little while", you tell your self.
 * **Ring**
-* You are startled by the noise you have been dreading all night.
+* You are startled by the noise that you have been dreading all night.
 * **Ring**
 * You answer your phone: "The integration module is acting up"
 * The words you wish you had misheard echo in your brain.
@@ -30,7 +30,7 @@ background-image: url(image/dejavu.jpg)
 
 * Code nobody wants to touch in fear of breaking it.
 * Development speed all but stopped.
-* Adding features becomes every more complex.
+* Adding features becomes ever more complex.
 * You have two bugs, you fix one, now there are five.
 
 ---
@@ -107,6 +107,9 @@ background-image: url(image/how.jpg)
 
 ## How to apply?
 
+* Observed by Kent Beck
+* Corey Haines wrote **understanding the 4 rules of simple design**
+
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/--amYQPhCSE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -135,6 +138,7 @@ background-image: url(image/mountain_path.svg)
 
 ## Global Day of Code Retreat
 
+* We answered why, we answered how, now answer when and where.
 * If you are interested?
 * Global day of code retreat
 * **November 17, 2018**
